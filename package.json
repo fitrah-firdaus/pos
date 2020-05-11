@@ -5,7 +5,8 @@
   "scripts": {
     "start:dev": "nodemon dist/index.js",
     "build:dev": "tsc --watch --preserveWatchOutput",
-    "dev": "concurrently \"npm:build:dev\" \"npm:start:dev\""
+    "tslint-check": "tslint-config-prettier-check ./tslint.json",
+    "dev": "concurrently \"npm:tslint-check\" \"npm:build:dev\" \"npm:start:dev\""
   },
   "keywords": [],
   "author": "",
@@ -33,6 +34,9 @@
     "@types/sequelize": "^4.28.8",
     "concurrently": "^5.2.0",
     "nodemon": "^2.0.3",
+    "prettier": "2.0.5",
+    "tslint": "^6.1.2",
+    "tslint-config-prettier": "^1.18.0",
     "typescript": "^3.8.3"
   }
 }
